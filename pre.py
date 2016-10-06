@@ -47,6 +47,7 @@ def process(raw):
             entry['project'] = ""
             entry['week'] = content
             entry['date'] = beginDate.replace(weeks=+content-1).format('MMM D')
+            print("Inserting date as: {}".format(entry['date']))
 
         elif field == 'topic' or field == 'project':
             entry[field] = content
