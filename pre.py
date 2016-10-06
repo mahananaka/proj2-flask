@@ -52,7 +52,7 @@ def process(raw):
             else:
                 print("not curWeek")
                 entry['curWeek'] = 1
-            print("week content: {}".format(content.stip()))
+            print("week content: {}".format(content.strip()))
 
         elif field == 'topic' or field == 'project':
             entry[field] = content
