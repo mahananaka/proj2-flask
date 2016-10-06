@@ -47,7 +47,7 @@ def process(raw):
             entry['project'] = ""
             entry['week'] = content
             entry['date'] = beginDate.replace(weeks=+int(content)).format('MMM D')
-            if isCurrentWeek(beginDate.replace(weeks=+int(content))):
+            if isCurrentWeek(beginDate.replace(weeks=+(int(content)-1))):
                 entry['curWeek'] = 1
             else:
                 entry['curWeek'] = 0
