@@ -65,7 +65,6 @@ def format_arrow_date( date ):
     except:
         return "(bad date)"
 
-
 #############
 #    
 # Set up to run from cgi-bin script, from
