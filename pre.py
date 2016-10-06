@@ -46,9 +46,9 @@ def process(raw):
             entry['topic'] = ""
             entry['project'] = ""
             entry['week'] = content
-            app.logger.debug(content)
+            print(content)
             entry['date'] = beginDate.replace(weeks=+(content-1))
-            app.logger.debug("Entry Date is: {}".format(entry['date']))
+            print("Entry Date is: {}".format(entry['date']))
 
         elif field == 'topic' or field == 'project':
             entry[field] = content
