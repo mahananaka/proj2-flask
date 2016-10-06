@@ -71,7 +71,7 @@ def is_this_week_current(date):
     #this stores a 3 tuple into each variable (year, week, day).
     argDate = arrow.get(date).isocalendar()
     curDate = arrow.now('local').isocalendar()
-    if argDate[0] == curDate[0] && argDate[1] == curDate[1]:
+    if argDate[0] == curDate[0] and argDate[1] == curDate[1]:
       return True
     return False
   except:
