@@ -46,9 +46,11 @@ def process(raw):
             entry['topic'] = ""
             entry['project'] = ""
             entry['week'] = content
-            print(content)
-            entry['date'] = beginDate.replace(weeks=+(int(content)-1))
-            print("Entry Date is: {}".format(entry['date']))
+            if isCurrentWeek(beginDate.replace(weeks=+int(content))):
+                entry['curWeek'] = 1
+            else:
+                entry['curWeek'] = 1
+            print("week content: {}".format(content))
 
         elif field == 'topic' or field == 'project':
             entry[field] = content
@@ -60,6 +62,14 @@ def process(raw):
         cooked.append(entry)
 
     return cooked
+
+def isCurrentWeek(date):
+    startDate = date.isocalendar()
+    curDate = arrow.now('local').isocalendar()
+
+    if argDate[0] == curDate[0] and argDate[1] == curDate[1]:
+        return True
+    return False
 
 
 def main():

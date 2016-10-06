@@ -65,18 +65,6 @@ def format_arrow_date( date ):
     except:
         return "(bad date)"
 
-@app.template_filter( 'currentWeek' )
-def is_this_week_current(date):
-  try:
-    #this stores a 3 tuple into each variable (year, week, day).
-    argDate = arrow.get(date).isocalendar()
-    curDate = arrow.now('local').isocalendar()
-    if argDate[0] == curDate[0] and argDate[1] == curDate[1]:
-      return True
-    return False
-  except:
-    return "(bad date)"
-
 #############
 #    
 # Set up to run from cgi-bin script, from
