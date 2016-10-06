@@ -47,10 +47,12 @@ def process(raw):
             entry['project'] = ""
             entry['week'] = content
             if isCurrentWeek(beginDate.replace(weeks=+int(content))):
+                print("found curWeek")
                 entry['curWeek'] = 1
             else:
+                print("not curWeek")
                 entry['curWeek'] = 1
-            print("week content: {}".format(content))
+            print("week content: {}".format(content.stip()))
 
         elif field == 'topic' or field == 'project':
             entry[field] = content
