@@ -45,7 +45,7 @@ def process(raw):
                 entry = { }
             entry['topic'] = ""
             entry['project'] = ""
-            entry['week'] = content
+            entry['week'] = content.strip()
             entry['date'] = beginDate.replace(weeks=+int(content)).format('MMM D')
             if isCurrentWeek(beginDate.replace(weeks=+(int(content)-1))):
                 entry['curWeek'] = 1
@@ -66,8 +66,6 @@ def process(raw):
 def isCurrentWeek(date):
     startDate = date.isocalendar()
     curDate = arrow.now('local').isocalendar()
-    print(startDate)
-    print(curDate)
     if startDate[0] == curDate[0] and startDate[1] == curDate[1]:
         return True
     return False
