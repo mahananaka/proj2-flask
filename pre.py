@@ -67,7 +67,7 @@ def isCurrentWeek(date):
     startDate = date.isocalendar()
     curDate = arrow.now('local').isocalendar()
 
-    if argDate[0] == curDate[0] and argDate[1] == curDate[1]:
+    if startDate[0] == curDate[0] and startDate[1] == curDate[1]:
         return True
     return False
 
