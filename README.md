@@ -1,57 +1,35 @@
 # proj2-flask
-A starter project for using the Flask framework
+A starter project for using the Flask framework, I work on this 
+for a class I am taking.
 
-Remember to remove these instructions and replace them with the 
-an appropriate README. 
+## Author: Jared Paeschke, paeschke@cs.uoregon.edu
 
+## Application
+This project uses Flask, Jinja2, Arrow, and CSS style sheets to 
+serve webpages. Using a data file and a Jinja template html web 
+pages are created and served. Users should be able to follow 
+the format of the data file located in ./data/schedule.txt to 
+make other schedules.
 
-## Basic task
+## Instruction for running
+From a your preferred command line do the following:
+*git clone http://github.com/mahananaka/proj2-flask.git
+*cd proj2-flask
+*bash ./configure (this might take a minute to run)
+*make service
 
-* Fork on github (or bitbucket)
-* Clone in your workspace and on ix
-* Enhance the class schedule display
-  * The starting date of each week should display
-  * The current week (just the column with the week number, or the
-    whole row if you prefer) should be highlighted in some way. 
+At this point you should be able to open webpages on port 8000
+If you're on the machine that it is installed you can do this 
+by going to http://127.0.0.1:8000/. If you installed it to a
+different machine you will need to get the ip address for it.
 
-## In your workspace
+Out of the box, the only pages are a 404 not found page and the 
+schedule page, which the root domain will route you to. This 
+schedule page is for the 10 week CIS 322 class held in the 
+Fall 2016 term at UO. The currently week is also highlighted so
+that it stands out.
 
-'bash ./configure' should create appropriate configuration files on
-most Unix files.   If you are using Windows, some additional editing
-of configuration files may be necessary.  You might have to edit the
-Makefile to find the right version of 
-pyvenv.
-
-If you can run flask applications in your development environment, the
-application would might be run by
-`   python3 syllabus.py`
-and then reached with url
-`   http://localhost:5000`
-
-`make run` will launch the debugging server built into flask.  It
-provides the best support for tracking down bugs in your server, but
-it's not suitable for use by many users or over a long period.  `make
-service` starts a Green Unicorn (gunicorn) server; you may note the extra
-lime sparkles all around you.  Green Unicorn can be used for servers
-that run over a longer period (e.g., if you want to leave a web
-service running on your Pi).   
-
-## On ix.cs.uoregon.edu
-
-You may optionally use ix for testing.  This could be of most use to
-Windows users;  for MacOS users, there is very little advantage of
-testing on ix over testing on MacOS.
-
-## On your Pi
-
-It is important to test your service on your Pi.  You should be able
-to write a simple shell script that installs the latest version of
-your system (by cloning your repository from github), configures it,
-and launches a server for testing.   If you are not familiar enough
-with Unix and with bash shell scripting to do that, work with
-classmates to develop the scripts you need.  I'll contribute to that
-effort, but I prefer to be part of a collaborative effort rather than
-just developing the scripts myself and giving them to you.  (I'll
-defintely have my own for installing and testing your projects.) 
-
-
+##Other information
+I built this projected and tested it on a Raspberry Pi 3. I cannot
+guarantee the success you will have on other systems. More steps
+may be required to install on other hardware.

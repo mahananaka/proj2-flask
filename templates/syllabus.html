@@ -1,3 +1,4 @@
+<!-- This Jinja Template was modified by J Paeschke, Oct 2016 -->
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html> <head>
 <title>Course Schedule</title>
@@ -13,6 +14,7 @@
 
 <table class="class-schedule">
   {% for entry in session.schedule %}
+  <!-- added the currentWeek tr -->
   {% if entry.curWeek %}
   <tr class="currentWeek">
   {% elif loop.index is divisibleby 2 %}
@@ -21,7 +23,7 @@
   <tr class="odd">
   {% endif %}	   
     <td class="week">{{ entry.week }}</td>
-    <td class="date">{{ entry.date }}</td>
+    <td class="date">{{ entry.date }}</td> <!--added the date this week begins-->
     <td class="topic">{{ entry.topic }}</td>
     <td class="project">{{ entry.project}}</td>
   </tr>
