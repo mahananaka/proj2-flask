@@ -19,7 +19,7 @@ From your preferred command line do the following:
 * make service
 
 At this point you should be able to open webpages on port 8000.
-If your on the machine you installed it to, you may do this 
+If you're on the machine you installed it to, you may do this 
 by going to http://127.0.0.1:8000/. If you installed it to a
 different machine you will need to get the ip address for it.
 
