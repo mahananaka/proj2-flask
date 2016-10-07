@@ -12,7 +12,7 @@ the format of the data file located in ./data/schedule.txt to
 make other schedules.
 
 ## Instruction for running
-From a your preferred command line do the following:
+From your preferred command line do the following:
 * git clone http://github.com/mahananaka/proj2-flask.git
 * cd proj2-flask
 * bash ./configure (this might take a minute to run)
