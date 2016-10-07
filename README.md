@@ -6,7 +6,7 @@ for a class.
 
 ## Application
 This project uses Flask, Jinja2, Arrow, and CSS style sheets to 
-serve webpages. Using a data file and a Jinja template html web 
+serve webpages. Using a data file and a Jinja template, html web 
 pages are created and served. Users should be able to follow 
 the format of the data file located in ./data/schedule.txt to 
 make other schedules.
