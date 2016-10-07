@@ -15,7 +15,7 @@ def process(raw):
     field = None
     entry = { }
     cooked = [ ]
-    beginDate = 0
+    beginDate = 0 #created new variable to hold the beginDate
     for line in raw:
         line = line.strip()
         if len(line) == 0 or line[0]=="#" :
@@ -34,7 +34,7 @@ def process(raw):
         if field == "begin":
             try:
                 base = arrow.get(content, "MM/DD/YYYY")
-                beginDate = base
+                beginDate = base #save to the variable for later use.
                 # print("Base date {}".format(base.isoformat()))
             except:
                 raise ValueError("Unable to parse date {}".format(content))
@@ -45,9 +45,12 @@ def process(raw):
                 entry = { }
             entry['topic'] = ""
             entry['project'] = ""
-            entry['week'] = content.strip()
-            entry['date'] = beginDate.replace(weeks=+(int(content)-1)).format('MMM D')
-            if isCurrentWeek(beginDate.replace(weeks=+(int(content)-1))):
+            entry['week'] = content.strip() #strip to get rid of the space in the number
+            entry['date'] = beginDate.replace(weeks=+(int(content)-1)).format('MMM D') #new entry field this will be the date column.
+            
+            #The only function added, determines if the entry is the current week. We create one 
+            #final field to hold a 1 or 0 to check when our jinja template is processed.
+            if isCurrentWeek(beginDate.replace(weeks=+(int(content)-1))): 
                 entry['curWeek'] = 1
             else:
                 entry['curWeek'] = 0
@@ -63,10 +66,15 @@ def process(raw):
 
     return cooked
 
+"""
+This funciton will return a true/false on whether the date is in the current week.
+Using the arrow library to make this easier. The arrow.isocalendar() returns
+(year, week #, day), which is helpful because we can do a simple comparison then.
+"""
 def isCurrentWeek(date):
     startDate = date.isocalendar()
     curDate = arrow.now('local').isocalendar()
-    if startDate[0] == curDate[0] and startDate[1] == curDate[1]:
+    if startDate[0] == curDate[0] and startDate[1] == curDate[1]: #if same year and week then this is the current week.
         return True
     return False
 
