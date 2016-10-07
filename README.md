@@ -19,14 +19,14 @@ From a your preferred command line do the following:
 * make service
 
 At this point you should be able to open webpages on port 8000.
-If you're on the machine that it is installed you can do this 
+If your on the machine you installed it to, you may do this 
 by going to http://127.0.0.1:8000/. If you installed it to a
 different machine you will need to get the ip address for it.
 
 Out of the box, the only pages are a 404 not found page and the 
 schedule page, which the root domain will route you to. This 
 schedule page is for the 10 week CIS 322 class held in the 
-Fall 2016 term at UO. The currently week is also highlighted so
+Fall 2016 term at UO. The current week is also highlighted so
 that it stands out.
 
 ##Other information
