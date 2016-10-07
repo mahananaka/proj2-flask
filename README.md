@@ -1,6 +1,6 @@
 # proj2-flask
-A starter project for using the Flask framework, I work on this 
-for a class I am taking.
+A starter project for using the Flask framework, I worked on this 
+for a class.
 
 ## Author: Jared Paeschke, paeschke@cs.uoregon.edu
 
@@ -13,12 +13,12 @@ make other schedules.
 
 ## Instruction for running
 From a your preferred command line do the following:
-*git clone http://github.com/mahananaka/proj2-flask.git
-*cd proj2-flask
-*bash ./configure (this might take a minute to run)
-*make service
+* git clone http://github.com/mahananaka/proj2-flask.git
+* cd proj2-flask
+* bash ./configure (this might take a minute to run)
+* make service
 
-At this point you should be able to open webpages on port 8000
+At this point you should be able to open webpages on port 8000.
 If you're on the machine that it is installed you can do this 
 by going to http://127.0.0.1:8000/. If you installed it to a
 different machine you will need to get the ip address for it.
