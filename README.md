@@ -37,4 +37,5 @@ More steps may be required to install on other hardware.
 ###### Python Virtual Environment not installed
 One issue I ran into was pyvenv was not installed by default on my Pi 3.
 To install this you can use the following.
+
 `sudo apt-get install python3-venv`
