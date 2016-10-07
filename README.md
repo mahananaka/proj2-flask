@@ -29,7 +29,10 @@ schedule page is for the 10 week CIS 322 class held in the
 Fall 2016 term at UO. The current week is also highlighted so
 that it stands out.
 
-##Other information
-I built this projected and tested it on a Raspberry Pi 3. I cannot
-guarantee the success you will have on other systems. More steps
-may be required to install on other hardware.
+##Troubleshooting info
+I built this projected and tested it on a Raspberry Pi 3 running Rasbian 
+Jessie. I cannot guarantee the success you will have on other systems. 
+More steps may be required to install on other hardware.
+
+One issue I ran into was pyvenv was not installed by default on my Pi 3.
+To install this you can use the following command: sudo apt-get install python3-venv
